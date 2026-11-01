@@ -1,4 +1,4 @@
-# Pointers in C
+# For Loop in C
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -52,30 +52,40 @@ Print the appropriate English representation,`even`, or `odd`, based on the cond
 **Language:** C  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-01T08:26:43.160Z  
+**Submitted:** 2026-11-01T09:03:32.305Z  
 
 ```c
 #include <stdio.h>
+#include <string.h>
+#include <math.h>
 #include <stdlib.h>
 
-void update(int *a, int *b) 
-{
-    int temp = *a;
-    *a = *a + *b;
-    *b = abs(temp-*b);
-}
 
-int main()
+
+int main() 
 {
     int a, b;
-    int *pa = &a, *pb = &b;
-    
-    scanf("%d %d", &a, &b);
-    update(pa, pb);
-    printf("%d\n%d", a, b);
+    char *words[] = {"","one","two","three","four","five","six","seven","eight","nine","ten","eleven"};
+    scanf("%d\n%d", &a, &b);
+  	for(int i=a; i<=b; i++)
+    {
+        if(i>=1 && i<=9)
+        {
+            printf("%s\n",words[i]);
+        }
+        else if(i%2==0)
+        {
+            printf("even\n");
+        }
+        else 
+        {
+            printf("odd");
+        }
+    }
 
     return 0;
 }
+
 
 ```
 
