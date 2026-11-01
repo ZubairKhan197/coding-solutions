@@ -22,7 +22,7 @@ int main()
         }
         else 
         {
-            printf("odd");
+            printf("odd\n");
         }
     }
 
