@@ -3,29 +3,19 @@
 #include <math.h>
 #include <stdlib.h>
 
-
-
-int main() 
-{
-    int a, b;
-    char *words[] = {"","one","two","three","four","five","six","seven","eight","nine","ten","eleven"};
-    scanf("%d\n%d", &a, &b);
-  	for(int i=a; i<=b; i++)
+int main() {
+	
+    int n;
+    scanf("%d", &n);
+    int remainder, sum = 0;
+    
+    while(n>0)
     {
-        if(i>=1 && i<=9)
-        {
-            printf("%s\n",words[i]);
-        }
-        else if(i%2==0)
-        {
-            printf("even\n");
-        }
-        else 
-        {
-            printf("odd\n");
-        }
+        remainder = n%10;
+        sum = sum + remainder;
+        n = n/10;
     }
-
+    
+    printf("%d",sum);
     return 0;
 }
-
